@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finhub — Your Financial Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo"><i class="fas fa-chart-line"></i> Finhub</h1>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#frontpage">Home</a>
+        <a href="#features">Features</a>
+        <a href="#chat" id="chatNav">Finance Chat</a>
+        <button class="btn primary" id="openLogin">Login</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="frontpage" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h2>Smart tools for smarter finances</h2>
+          <p>Track spending, set budgets, and get instant finance advice from our chatbot — all in one secure place.</p>
+          <div class="hero-cta">
+            <button class="btn primary" id="getStarted">Get Started</button>
+            <a href="#features" class="btn ghost">See Features</a>
+          </div>
+        </div>
+        <div class="hero-illustration" aria-hidden="true">
+          <div class="card stats">
+            <h3>Total Net</h3>
+            <p class="amount">$24,560</p>
+            <p class="sub">+7% this month</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="container features">
+      <h2>What you can do</h2>
+      <div class="grid">
+        <article class="feature">
+          <i class="fas fa-wallet fa-2x"></i>
+          <h3>Track Spending</h3>
+          <p>Visualize where your money goes and set targets to save more.</p>
+        </article>
+        <article class="feature">
+          <i class="fas fa-chart-pie fa-2x"></i>
+          <h3>Budgeting</h3>
+          <p>Create budgets, get alerts, and reach your financial goals faster.</p>
+        </article>
+        <article class="feature">
+          <i class="fas fa-robot fa-2x"></i>
+          <h3>Chatbot Advisor</h3>
+          <p>Ask finance questions and receive friendly guidance instantly.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" id="closeLogin" aria-label="Close login">&times;</button>
+        <h2>Welcome back</h2>
+        <form id="loginForm" class="form" aria-label="Login form">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" required>
+
+          <button type="submit" class="btn primary">Login</button>
+        </form>
+        <p id="loginMessage" class="muted"></p>
+      </div>
+    </div>
+
+    <!-- Chat widget (floating) -->
+    <aside id="chatWidget" class="chat-widget" aria-live="polite">
+      <div class="chat-header">
+        <strong>Finhub Advisor</strong>
+        <button id="toggleChat" aria-label="Open chat">💬</button>
+      </div>
+      <div class="chat-body" id="chatBody">
+        <div id="messages" class="messages" role="log" aria-live="polite"></div>
+        <form id="chatForm" class="chat-form" onsubmit="return false;">
+          <input id="chatInput" aria-label="Type your question" placeholder="Ask about budgets, investing, taxes...">
+          <button id="sendBtn" class="btn" type="button">Send</button>
+        </form>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Finhub. Designed for finance-curious users.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

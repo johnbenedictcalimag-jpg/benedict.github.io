@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Finhub — Chatbot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="chat-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo"><i class="fas fa-chart-line"></i> Finhub</h1>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container chat-page-main">
+    <div class="chat-full-wrap">
+      <div class="chat-page-header">
+        <h2>Finance Chat</h2>
+      </div>
+
+      <!-- Welcome modal for student topics -->
+      <div id="welcomeModal" class="welcome-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="welcome-modal-content">
+          <button class="modal-close" id="welcomeClose" aria-label="Close welcome">&times;</button>
+          <h3>Need help with student finances?</h3>
+          <p>Select a topic to get started — we'll show a short guide.</p>
+          <div class="welcome-topics">
+            <button class="topic-btn btn ghost" data-topic="Budgeting">Budgeting</button>
+            <button class="topic-btn btn ghost" data-topic="Textbooks">Textbooks & Course Materials</button>
+            <button class="topic-btn btn ghost" data-topic="Scholarships">Scholarships & Grants</button>
+            <button class="topic-btn btn ghost" data-topic="Student Loans">Student Loans</button>
+            <button class="topic-btn btn ghost" data-topic="Part-time Work">Part-time Work</button>
+            <button class="topic-btn btn ghost" data-topic="Savings">Savings Tips</button>
+            <button class="topic-btn btn ghost" data-topic="Credit">Build Credit</button>
+          </div>
+          <label class="welcome-opts"><input type="checkbox" id="welcomeDontShow"> Don't show this again</label>
+        </div>
+      </div>
+
+      <div id="chatWidget" class="chat-widget chat-full" aria-live="polite">
+        <div class="chat-header">
+          <strong>Finhub Advisor</strong>
+          <div class="chat-controls">
+            <button id="clearChat" class="btn ghost small" aria-label="Clear chat">🗑️</button>
+            <button id="toggleChat" aria-label="Open chat">💬</button>
+          </div>
+        </div>
+        <div class="chat-body" id="chatBody">
+          <div id="messages" class="messages" role="log" aria-live="polite"></div>
+          <form id="chatForm" class="chat-form" onsubmit="return false;">
+            <input id="chatInput" aria-label="Type your question" placeholder="Ask about budgets, investing, taxes...">
+            <button id="sendBtn" class="btn" type="button">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>&copy; 2025 Finhub</p></div>
+  </footer>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="script.js"></script>
+</body>
+</html>

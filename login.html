@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Finhub — Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo"><i class="fas fa-chart-line"></i> Finhub</h1>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="chatbot.html">Chatbot</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" style="max-width:480px;margin:3rem auto;">
+      <h2>Login to Finhub (Demo)</h2>
+      <form id="loginForm" class="form" aria-label="Login form">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required>
+
+        <button type="submit" class="btn primary">Login</button>
+      </form>
+      <p id="loginMessage" class="muted"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>&copy; 2025 Finhub</p></div>
+  </footer>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="script.js"></script>
+</body>
+</html>
